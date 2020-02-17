@@ -20,6 +20,11 @@ export default class Header extends React.Component{
 			case('Clouds'):
 				bg ='#969696'
 				image = <img src="/clouds.svg" className="img-responsive"/>
+				break;
+			case('Snow'):
+				bg = '#adbbcc'
+				image = <img src="/snow.svg" className="img-responsive"/>
+				break;
 		}
 
 

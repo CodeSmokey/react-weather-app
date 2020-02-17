@@ -11,8 +11,8 @@ export default class App extends React.Component{
 		this.state = {
 			lat: '',
 			long: '',
-			flat: '0.039',
-			flong: '-51.066',
+			flat: '36.5211728',
+			flong: '46.2100519',
 			city: 'LOADING...',
 			weather: {
 				id: 0,
