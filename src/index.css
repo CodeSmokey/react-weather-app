@@ -45,7 +45,7 @@ code {
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: relative;
-	top:70vh;
+	top:50vh;
 	z-index: 999;
 	height:auto;
 	padding:300px 0
@@ -54,4 +54,61 @@ code {
 .centeredRow{
 	padding: 10rem 0;
 	/* align-items: center; */
+}
+
+.city-content{
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	padding: 50px 0;
+	text-align: center;
+}	
+.city-content h1{
+	font-family: 'Montserrat Black', sans-serif;
+	font-size: 5rem;
+	padding: 0;
+	margin: 0;
+
+}
+.loc-pin{
+	background-image: url('/location-pin.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+}
+@media(max-width: 1200px){
+	.centeredRow{
+		padding-top: 5rem;
+	}
+	.city-content{
+		grid-template-columns: 1fr 3fr;
+	}
+	.city-content h1{
+		font-size: 60px;
+		margin-top: 10px
+	}
+	.info-section{
+		top:65vh;
+		padding-top:200px
+	}
+}
+@media(max-width: 975px){
+	.city-content img{
+		max-height: 100px;
+		display:flex;
+
+	}
+}
+@media(max-width: 900px){
+	.city-content h1{
+		font-size: 70px;
+	}
+	.city-content img{
+		height: 100px;
+		display: flex;
+		justify-self: flex-end;
+		align-self: center;
+	}
+	.info-section{
+		padding-top: 100px;
+		top: 70vh;
+	}
 }
