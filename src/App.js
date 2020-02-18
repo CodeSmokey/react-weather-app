@@ -11,8 +11,6 @@ export default class App extends React.Component{
 		this.state = {
 			lat: '',
 			long: '',
-			flat: '36.5211728',
-			flong: '46.2100519',
 			city: 'LOADING...',
 			weather: {
 				id: 0,
@@ -42,8 +40,8 @@ export default class App extends React.Component{
 
 	getLocation(){
 		navigator.geolocation.getCurrentPosition(loc => {
-			// this.getWeatherData(loc.coords.latitude, loc.coords.longitude);
-			this.getWeatherData( this.state.flat, this.state.flong);
+			this.getWeatherData(loc.coords.latitude, loc.coords.longitude);
+			// this.getWeatherData( this.state.flat, this.state.flong);
 		});
 
 	}
