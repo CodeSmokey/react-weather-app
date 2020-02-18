@@ -25,6 +25,14 @@ export default class Header extends React.Component{
 				bg = '#adbbcc'
 				image = <img src="/snow.svg" className="img-responsive"/>
 				break;
+			case('Rain'):
+				bg = '#7298a5'
+				image = <img src="/rain.svg" className="img-responsive"/>
+				break;
+			case('Thunderstorm'):
+				bg = '#203d4c'
+				image = <img src="/thunder.svg" className="img-responsive"/>
+				break;
 		}
 
 
