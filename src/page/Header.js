@@ -55,7 +55,7 @@ export default class Header extends React.Component{
 								</div>
 							</div>
 						</div>
-						<div className="col-lg-6 col-sm-12 text-center">
+						<div className="col-lg-6 col-sm-12 text-center d">
 							{ image }
 							{/* Test */}
 						</div>
