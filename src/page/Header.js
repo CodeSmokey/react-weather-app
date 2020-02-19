@@ -33,6 +33,10 @@ export default class Header extends React.Component{
 				bg = '#203d4c'
 				image = <img src="/thunder.svg" className="img-responsive"/>
 				break;
+			case('Haze'):
+				bg = 'rgb(142, 136, 131)'
+				image = <img src="/haze.svg" className="img-responsive"/>
+				break;
 		}
 
 
