@@ -35,6 +35,7 @@ export default class App extends React.Component{
 			searchOver: false,
 			newLat: '',
 			newLong: '',
+			searchInput: '',
 
 		}
 		this.flat = ''
@@ -79,7 +80,7 @@ export default class App extends React.Component{
 			// console.log({handler: 'weathersearchHandler Check', status: this.state.searchOver})
 	}
 	async handleSearch(e){
-		this.setState({searchOver: false})
+		this.setState({searchOver: false, searchInput: e.target.value})
 
 		const request = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${e.target.value}&appid=${this.apiKey}`)
 		const data = await request.json();
@@ -104,7 +105,7 @@ export default class App extends React.Component{
 	}
 
 	async handleClick(e){
-		this.setState({searchOver: false})
+		this.setState({searchOver: false, searchInput: ''})
 		if(this.locAvailable){
 			this.getWeatherData(this.flat, this.flong)
 		}else{
@@ -131,7 +132,7 @@ export default class App extends React.Component{
 			<div>
 				<div className="search" style={{position: 'absolute', margin: '10px', zIndex: 9999}}>
 					<div className="search-box">
-						<input type="text" className="search-input-control" name="location" onChange={this.handleSearch}/><div id="searchIcon"></div>
+						<input type="text" className="search-input-control" name="location" value={this.searchInput} onChange={this.handleSearch}/><div id="searchIcon"></div>
 					</div>
 					{ element }
 				</div>
